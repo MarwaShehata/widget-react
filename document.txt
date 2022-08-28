@@ -1,0 +1,44 @@
+
+PROJECT STEPS
+App Component 
+A) take the serch term from the (SearcBar Component)
+1-(SearchBar Component)
+  a) state for input change
+  b) onSubmit for the form ==> send the search term to the app =>send the serch term to the api request
+B) make axios request using search term
+C) get resault from axios
+D) state for videos array from axios
+E) send videos data to (VideosList Component)
+F) send onVideoSelect to (Videolist Component) 
+2-(VideoList Component)
+  a) show the video list 
+  b) map on videos array
+  c) send onVideoSelect to (VideoItem Component)  
+3-(VideoItem Component)
+  a) select video 
+  b) send the video to the app 
+G) state for selected video
+H) send the selected  video to (VideoDetailes Component)
+
+
+IMPORTANT NOTES
+
+1)
+const onSelectedVideo=(video)=>{
+  setselectedVideo(video
+}
+onSelectedVideo={onSelectedVideo}
+===
+onSelectedVideo={(video)=>{setselectedVideo(video)}} 
+===
+onSelectedVideo={setselectedVideo}
+
+
+DEPLOY THE PROJECT
+
+npm install -g vercel
+vercel login
+vercel
+
+DEPLOY AFTER CHANGE
+vercel --prod
